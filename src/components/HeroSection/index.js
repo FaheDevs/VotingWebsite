@@ -31,8 +31,7 @@ function HeroSection() {
           i-voting est une plateforme de vote en ligne qui vvous aide a gérer vos élections facilement et en toute sécurité grace a la technologie de la blockchain
         </HeroP>
         <HeroBtnWrapper>
-          <Button
-            to='signup'
+          <Button to='/signup'
             smooth={true}
             duration={500}
             spy={true}
@@ -47,8 +46,7 @@ function HeroSection() {
           </Button>
         </HeroBtnWrapper>
         <HeroBtnWrapper>
-          <Button
-            to='signup'
+          <Button to='/signup'
             smooth={true}
             duration={500}
             spy={true}
