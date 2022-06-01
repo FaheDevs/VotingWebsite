@@ -48,7 +48,7 @@ function HeroSection() {
           </ButtonForRedirect>
         </HeroBtnWrapper>
         <HeroBtnWrapper>
-          <Button to='/Users/zidanifahed/i-voting/src/components/signUp/index.js'
+          <ButtonForRedirect to='/candidate'
             smooth={true}
             duration={500}
             spy={true}
@@ -60,7 +60,7 @@ function HeroSection() {
             onMouseLeave={onHover}
           >
             Electeur  {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ButtonForRedirect>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
