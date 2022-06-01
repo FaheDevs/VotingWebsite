@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '../ButtonElements';
+import { ButtonForRedirect } from '../Button';
 
 import Video from '../../videos/video.mp4';
 import {
@@ -29,10 +30,10 @@ function HeroSection() {
       <HeroContent>
         <HeroH1>La solution électorale parfaite </HeroH1>
         <HeroP>
-          i-voting est une plateforme de vote en ligne qui vvous aide a gérer vos élections facilement et en toute sécurité grace a la technologie de la blockchain
+          i-voting est une plateforme de vote en ligne qui vous aide a gérer vos élections facilement et en toute sécurité grace a la technologie de la blockchain
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='/Users/zidanifahed/i-voting/src/components/signUp/index.js'
+          <ButtonForRedirect to='/organisation'
             smooth={true}
             duration={500}
             spy={true}
@@ -44,7 +45,7 @@ function HeroSection() {
             onMouseLeave={onHover}
           >
             Administrateur  {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ButtonForRedirect>
         </HeroBtnWrapper>
         <HeroBtnWrapper>
           <Button to='/Users/zidanifahed/i-voting/src/components/signUp/index.js'

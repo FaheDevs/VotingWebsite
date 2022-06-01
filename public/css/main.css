@@ -93,15 +93,7 @@
   font-weight: 700;
  
 }
-.form-row .mail ::after{ 
-  color: #d00;
-  content: "*";
-  position: absolute;
-  margin-left: 8px;
-  top:7px;
-  
- 
-}
+
 
 .form-row .value {
   width: -webkit-calc(100% - 125px);
@@ -288,6 +280,14 @@ h6 {
 /* ==========================================================================
    #BACKGROUND
    ========================================================================== */
+
+
+
+#star {
+
+  color: red;
+
+}
 .bg-blue {
   background: #2c6ed5;
   /* background-color: #20bf55;
@@ -572,7 +572,7 @@ input {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: #57b846;
+  background: #b8464f;
 }
 
 .checkmark {
@@ -797,10 +797,3 @@ input {
 
 
 
-#mail:after { 
-  color: #d00;
-  content: "*";
-  position: absolute;
-  margin-left: 8px;
-  top:7px;
-}

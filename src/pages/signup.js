@@ -8,7 +8,7 @@ const signupPage = () => {
     <div class="wrapper wrapper--w790">
         <div class="card card-5">
             <div class="card-heading">
-                <h2 class="title">REgistration Form</h2>
+                <h2 class="title">Registration Form</h2>
             </div>
             <div class="card-body">
                 <form method="POST">

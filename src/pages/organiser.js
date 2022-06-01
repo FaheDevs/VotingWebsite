@@ -2,7 +2,7 @@ import React from 'react'
 
 const organiser = () => {
   return (
-    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50" >
     <div class="wrapper wrapper--w790">
         <div class="card card-5">
             <div class="card-heading">
@@ -10,6 +10,35 @@ const organiser = () => {
             </div>
             <div class="card-body">
                 <form method="POST">
+                <div class="form-row p-t-20">
+                        <label class="label label--block">what are you organizing?</label>
+                        <div class="p-t-15">
+                            <label class="radio-container m-r-55">Vote 
+                                <input type="radio" checked="checked" name="exist"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container"> Sondage 
+                                <input type="radio" name="exist"/>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row p-t-20">
+                        <label class="label label--block">choose privacy</label>
+                        <div class="p-t-15">
+                            <label class="radio-container m-r-55">Public 
+                                <input type="radio" checked="checked" name="exist"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container"> Private
+                                <input type="radio" name="exist"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                        </div>
+                        
+                    </div>
                     <div class="form-row m-b-55">
                         <div class="name">Organiser</div>
                         <div class="value">
@@ -38,7 +67,7 @@ const organiser = () => {
                         </div>
                     </div>
                     <div class="form-row" >
-                        <div class="mail" id='mail'>Email <span>*</span></div>
+                        <div class="mail" id='mail'>Email<span id='star'>*</span></div>
                         <div class="value">
                             <div class="input-group">
                                 <input class="input--style-5" type="email" name="email"/>
@@ -46,7 +75,7 @@ const organiser = () => {
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="name">username <span>*</span></div>
+                        <div class="name">username<span id='star'>*</span></div>
                         <div class="value">
                             <div class="input-group">
                                 <input class="input--style-5" type="text" name="username"/>
@@ -54,7 +83,7 @@ const organiser = () => {
                         </div>
                     </div>
                     <div class="form-row" id='passW'>
-                        <div class="name">password<span>*</span></div>
+                        <div class="name">password<span id='star'>*</span></div>
                         <div class="value">
                             <div class="input-group">
                                 <input class="input--style-5" type="password" name="pass"/>
@@ -62,7 +91,7 @@ const organiser = () => {
                         </div>
                     </div>
                     <div class="form-row m-b-55">
-                        <div class="name">Phone<span>*</span></div>
+                        <div class="name">Phone<span id='star'>*</span></div>
                         <div class="value">
                             <div class="row row-refine">
                                 <div class="col-3">
@@ -96,19 +125,7 @@ const organiser = () => {
                             </div>
                         </div>
                     </div> */}
-                    <div class="form-row p-t-20">
-                        <label class="label label--block">what are you organizing?</label>
-                        <div class="p-t-15">
-                            <label class="radio-container m-r-55">Vote 
-                                <input type="radio" checked="checked" name="exist"/>
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="radio-container"> Sondage 
-                                <input type="radio" name="exist"/>
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                    </div>
+                    
                     <div>
                         <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
                     </div>
