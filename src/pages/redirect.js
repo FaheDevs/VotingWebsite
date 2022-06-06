@@ -6,9 +6,11 @@ export const redirect = () => {
       
 
     <form onsubmit="event.preventDefault()" class="box"> 
-    <h1 id='vote'>? </h1> 
+    <h1 id='vote'> </h1> 
     <Button type="button" name="" value="Vote" href="#"/> 
     <Button type="button" name="" value="Sondage" href="#"/> 
+
+    
 
   </form> 
   )
