@@ -9,6 +9,8 @@ import Apply from './Apply';
 import organiser from './pages/organiser';
 import candidate from './pages/candidate';
 import redirect from './pages/redirect';
+import { vote } from './pages/vote';
+import { Card } from './components/VoteCard/Card';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
         <Route path='/organisation' component={organiser} />
         <Route path='/candidate' component={candidate} />
         <Route path='/redirect' component={redirect} />
+        <Route path='/vote' component={vote} />
+        <Route path='/card' component={Card} />
+
+
 
 
 
