@@ -1,44 +1,16 @@
-// import React from 'react'
-// import { ButtonForRedirect } from '../Button';
-// import {
-//     HeroContainer,
-//     HeroBg,
-//     VideoBg,
-//     HeroContent,
-//     HeroH1,
-//     HeroP,
-//     HeroBtnWrapper,
-//     ArrowForward,
-//     ArrowRight
-//   } from './HeroElements';
-  
+import React from 'react'
+import { Button } from 'react-scroll'
 
+export const redirect = () => {
+  return (
+      
 
-// const redirect = () => {
-// return(
-//     <h1>heyy </h1>
+    <form onsubmit="event.preventDefault()" class="box"> 
+    <h1 id='vote'>? </h1> 
+    <Button type="button" name="" value="Vote" href="#"/> 
+    <Button type="button" name="" value="Sondage" href="#"/> 
 
-// //     const [hover, setHover] = useState(false);
-
-// //   const onHover = () => {
-// //     setHover(!hover);
-// //   };
-// //   return (
-// //     <ButtonForRedirect to='/organisation'
-// //     smooth={true}
-// //     duration={500}
-// //     spy={true}
-// //     exact='true'
-// //     offset={-80}
-// //     primary='true'
-// //     dark='true'
-// //     onMouseEnter={onHover}
-// //     onMouseLeave={onHover}
-// //   >
-// //     Administrateur  {hover ? <ArrowForward /> : <ArrowRight />}
-// //   </ButtonForRedirect>
-
-//   )
-// }
-
-// export default redirect
+  </form> 
+  )
+}
+export default redirect
