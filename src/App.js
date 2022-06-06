@@ -8,6 +8,7 @@ import signupPage from './pages/signup';
 import Apply from './Apply';
 import organiser from './pages/organiser';
 import candidate from './pages/candidate';
+import redirect from './pages/redirect';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Route path='/signup' component={signupPage} />
         <Route path='/organisation' component={organiser} />
         <Route path='/candidate' component={candidate} />
+        <Route path='/redirect' component={redirect} />
+
+
 
 
       </Switch>
