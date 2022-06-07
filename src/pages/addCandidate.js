@@ -43,6 +43,11 @@ const addCandidate = () => {
               </div>
               
           </form>
+
+          <div>
+            <h6>here we add the names </h6>
+            
+          </div>
       </div>
   </div>
 </div>
