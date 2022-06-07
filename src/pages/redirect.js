@@ -1,18 +1,31 @@
-import React from 'react'
-import { Button } from 'react-scroll'
+import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
+import { Button } from "react-scroll";
+import "./redirect.css";
 
-export const redirect = () => {
+export const Redirection = () => {
+
+const [redirectVote , SetredirectVote] = useState(false)
+
+  const [redirectSondage , SetredirectSondage] = useState(false);
+
+  const Voteclickhandel =()=>{
+    SetredirectVote(true);
+  }
+  const Sondageclickhandel =()=>{
+    SetredirectSondage(true);
+  }
+
   return (
-      
+    <form class="box">
+      <h1 id="vote"> </h1>
+      <Button type="button" name=""  onClick={Voteclickhandel} 
+      value="Vote"  />
+              { redirectVote ? (<Redirect push to="/addCandidate"/>) : null }
+      <Button type="button" name="" value="Sondage" onClick={Sondageclickhandel} />
+      { redirectSondage ? (<Redirect push to="/addSubject"/>) : null }
 
-    <form onsubmit="event.preventDefault()" class="box"> 
-    <h1 id='vote'> </h1> 
-    <Button type="button" name="" value="Vote" href="#"/> 
-    <Button type="button" name="" value="Sondage" href="#"/> 
-
-    
-
-  </form> 
-  )
-}
-export default redirect
+    </form>
+  );
+};
+export default Redirection;

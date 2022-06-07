@@ -1,4 +1,5 @@
 import React from 'react'
+import "./vote.css"
 
 export const vote = () => {
   return (
