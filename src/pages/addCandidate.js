@@ -37,8 +37,11 @@ const addCandidate = () => {
               />
             </div>
               <div class="text-center">
-                  <button type="submit" class="btn btn-start-order">validate candidate</button>
+                  <button type="submit" class="btn btn-start-order">Add candidate</button>
+                  <button type="submit" class="btn btn-start-order">Validate Candidates </button>
+
               </div>
+              
           </form>
       </div>
   </div>
