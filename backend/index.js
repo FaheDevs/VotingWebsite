@@ -1,9 +1,17 @@
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
-const PORT = process.env.PORT
+const MongoClient = require('mongodb').MongoClient;
+const dotenv = require('dotenv')
+const PORT = 3001
 const express = require('express');
 const app = express();
+const mongoose =require('mongoose');
+const routesUrls = require('./routes/routes');
+dotenv.config()
+const url = process.env.DATABASE_ACCESS
+
+
 app.use(express.json());
+
 app.use(express.urlencoded(
     {extended: true})
 );
@@ -23,6 +31,21 @@ function generateRefreshToken(user) { // POur pas quE chaQUE FOIS ON CHANGE DE T
     console.log("REFRESH DONE")
     return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, {expiresIn: '1y'});
 }
+
+mongoose.connect(process.env.DATABASE_ACCESS,() => console.log("Database connected "))
+MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("myTable");
+    dbo.collection("mytables").findOne({}, function(err, result) {
+      if (err) throw err;
+      console.log(result);
+      db.close();
+    });
+  });
+  app.post('/api/validateCandidates',(req,res)=>{
+    let a = JSON.parse(req.body.candidates);})
+    
+app.use('', routesUrls)
 
 
 app.post('/api/login', (req, res) => {
@@ -129,6 +152,8 @@ app.post("/api/register", (req, res) => {
 
         })
 })
+
+
 
 app.get('/api/me', authenticateToken, (req, res) => {
     res.send(req.user);
