@@ -4,7 +4,6 @@ const router = express.Router()
 const signUpTemplatesCopy = require('../models/testModel');
 
 
-
 router.post('/signup',(request,response) => {
     const signedUpUser = new signUpTemplatesCopy({
         fullName:request.body.fullName,
@@ -22,7 +21,9 @@ router.post('/signup',(request,response) => {
     })
 
 })
-
+router.post('/validateCandidates', (req, res) => {
+    let a = JSON.parse(req.body.candidates);
+})
 
 
 
